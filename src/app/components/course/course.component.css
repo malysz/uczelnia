@@ -1,0 +1,48 @@
+.list {
+  width: 50vw;
+  height: 10vh;
+  padding: 0.5vh 2vh 0.5ch 2vh;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+.list-even {
+  background-color: lightgray;
+}
+.list-odd {
+  background-color: cornsilk;
+}
+.image {
+  width: 9vh;
+  padding: 0.5vh;
+}
+.image img {
+  width: 8vh;
+  height: 8vh;
+  margin-right: 2vw;
+}
+.coursename {
+  width: 15vh;
+  height: 9vh;
+  justify-content: center;
+  text-align: center;
+  font-family: "Arial Narrow";
+  font-weight: bold;
+  font-size: 2.5vh;
+  margin-right: 2vw;
+}
+.courseinfo {
+  font-family: "Arial Narrow";
+}
+.courseinfo p {
+  margin: 0.3vh;
+}
+.deleteButton {
+  width: 8vh;
+  height: 3vh;
+  text-align: center;
+  border-radius: 10%;
+  top: 0.1vh;
+  right: 0.1vh;
+  background-color: red;
+}

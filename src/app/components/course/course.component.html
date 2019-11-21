@@ -1,0 +1,18 @@
+<div [ngClass]="['list', isEven ? 'list-even' : 'list-odd']">
+  <div [ngClass]="'image'">
+    <img src="{{ course.icon }}">
+  </div>
+  <div [ngClass]="'coursename'">
+    <p>{{ course.name }}</p>
+  </div>
+  <div [ngClass]="'courseinfo'">
+    <p>Semestr: {{ course.semester }}</p>
+    <p>ECTS: {{ course.ects }}</p>
+    <p>Ocena kursu: {{ course.grade }}</p>
+    <p>Ilość komentarzy o prowadzących: </p>
+  </div>
+  <button [ngClass]="'deleteButton'" (click)="onDelete(course)">
+    usuń
+  </button>
+</div>
+
