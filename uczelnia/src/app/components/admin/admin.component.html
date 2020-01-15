@@ -1,0 +1,15 @@
+<div>
+  <div id="filter">
+    <form>
+      <input id="searchbox" type="text" class="form-control" placeholder="Wyszukaj kurs" [(ngModel)]="termName" [ngModelOptions]="{standalone: true}"/>
+    </form>
+    <button id="addCourseBtn" class="btn btn-success" [routerLink]="['add-course']">Dodaj kurs</button>
+  </div>
+  <ul class="list-group">
+    <app-admin-course
+      *ngFor="let course of (courses | filter:termName), even as isEven"
+      [course]="course" [isEven]="isEven"
+      (deleteCourse)="deleteCourse($event)"
+    ></app-admin-course>
+  </ul>
+</div>

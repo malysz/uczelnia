@@ -1,0 +1,16 @@
+.form-input {
+  min-width: 20vw;
+  margin: 2vh;
+}
+.form-btn {
+  margin: 2vh;
+}
+.title {
+  color: azure;
+  margin: 5vh;
+  text-align: center;
+}
+.form {
+  text-align: center;
+}
+

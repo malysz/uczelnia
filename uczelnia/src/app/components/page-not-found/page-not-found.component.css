@@ -1,0 +1,10 @@
+.sign {
+  min-width: 60vw;
+  min-height: 30vh;
+  border-radius: 25px;
+  background-color: red;
+  margin: 10vh;
+  text-align: center;
+  padding-top: 7vh;
+  font-size: 8vh;
+}

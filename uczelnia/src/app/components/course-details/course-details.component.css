@@ -1,0 +1,23 @@
+.details-wrapper {
+  margin-top: 10vh;
+  min-height: 20vh;
+  width: 50vw;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  background-color: #6c757d;
+  padding: 1vw;
+}
+div {
+  padding: 0.3vh;
+}
+.icon {
+  height: 10vh;
+  width: 10vh;
+}
+h1 {
+  margin: 2vh;
+}
+h3 {
+  margin: 2vh;
+}

@@ -1,0 +1,13 @@
+<div>
+  <h1>Dodaj nowy kurs</h1>
+  <form [formGroup]="courseForm" (ngSubmit)="addCourse()" class="form-group">
+    <input type="text" class="form-control" placeholder="Nazwa" formControlName="courseName" />
+    <input type="text" class="form-control" placeholder="Ikona" formControlName="courseIcon" />
+    <input type="number" min="1" max="10" class="form-control" placeholder="Semestr" formControlName="courseSemester" />
+    <input type="number" min="1" max="5" class="form-control" placeholder="Ocena" formControlName="courseGrade" />
+    <input type="number" class="form-control" placeholder="Ilość miejsc" formControlName="maxStudents" />
+    <input type="number" min="1" max="30" class="form-control" placeholder="ECTS" formControlName="courseEcts" />
+    <input id="submitBtn" type="submit" value="Dodaj" class="btn btn-success" [disabled]="courseForm.status === 'INVALID'" />
+  </form>
+  <button class="btn btn-warning backBtn" [routerLink]="['/admin']">Powrót</button>
+</div>

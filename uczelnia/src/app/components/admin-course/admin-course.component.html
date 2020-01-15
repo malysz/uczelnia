@@ -1,0 +1,20 @@
+<li [ngClass]="['list', isEven ? 'list-group-item list-group-item-dark' : 'list-group-item list-group-item-secondary']">
+  <div class="row">
+    <div [ngClass]="['col-sm-12 col-md-4 text-center', 'image']">
+      <img class="img-fluid" src="{{ course.icon }}">
+    </div>
+    <div [ngClass]="['col-sm-12 col-md-4 text-center', 'coursename']">
+      <p>{{ course.name }}</p>
+      <p><span class="badge badge-warning">Semestr: {{ course.semester }}</span> <span
+        class="badge badge-success">{{ course.grade }}</span></p>
+    </div>
+    <div [ngClass]="'col-sm-12 col-md-4 text-right'">
+      <button [ngClass]="'btn btn-primary deleteButton'" [routerLink]="['edit-course/', course.name]">
+        edytuj
+      </button>
+      <button [ngClass]="'btn btn-danger deleteButton'" (click)="onDelete(course)">
+        usuń
+      </button>
+    </div>
+  </div>
+</li>

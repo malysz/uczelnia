@@ -1,0 +1,20 @@
+<div>
+  <div class="title">
+    <div class="alert alert-danger" *ngIf="authenticationService.alertFlag">
+      <strong>Błąd!</strong> Niepoprawny email lub hasło.
+    </div>
+
+    <h1>Witaj w serwisie Uczelnia!</h1>
+    <h2 *ngIf="authenticationService.userData | async">Jesteś zalogowany jako {{ (authenticationService.userData | async)?.email }}</h2>
+    <button class="btn bg-info form-btn" (click)="signOut()" *ngIf="authenticationService.userData | async">Logout</button>
+  </div>
+
+  <div class="form" *ngIf="!(authenticationService.userData | async)">
+    <input class="form-control form-control-lg form-input" type="text" [(ngModel)]="email" placeholder="email">
+    <input class="form-control form-control-lg form-input" type="password" [(ngModel)]="password" placeholder="hasło">
+
+    <button class="btn bg-info form-btn" (click)="signUp()">Sign Up</button>
+
+    <button class="btn bg-info form-btn" (click)="signIn()">Login</button>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+div {
+  color: azure;
+  text-align: center;
+}
+h1 {
+  margin-top: 2vh;
+  margin-left: 10vw;
+  color: aliceblue;
+  font-style: italic;
+  border-bottom: azure 0.7px solid;
+  width: 20vw;
+  text-align: center;
+}
+input {
+  margin-top: 1vh;
+  width: 40vw;
+}
+#submitBtn {
+  width: 15vw;
+}
+.backBtn {
+  width: 15vw;
+}

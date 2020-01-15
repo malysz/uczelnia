@@ -1,0 +1,19 @@
+<div>
+  <h1>Edytuj {{ course.name }}</h1>
+  <form [formGroup]="courseForm" (ngSubmit)="updateCourse()" class="form-group">
+    <label>Nazwa: {{ course.name }}</label> <input type="text" class="form-control inputField" placeholder="Nazwa" formControlName="courseName" />
+    <label>Url ikony </label> <input type="text" class="form-control inputField" placeholder="Ikona" formControlName="courseIcon" />
+    <label>Semestr: {{ course.semester }}</label> <input type="number" min="1" max="10" class="form-control inputField" placeholder="Semestr" formControlName="courseSemester" />
+    <label>Ocena: {{ course.grade }}</label> <input type="number" min="1" max="5" class="form-control inputField" placeholder="Ocena" formControlName="courseGrade" />
+    <label>Ilość miejsc: {{ course.maxStudents }}</label> <input type="number" class="form-control inputField" placeholder="Ilość miejsc" formControlName="maxStudents" />
+    <label>ECTS: {{ course.ects }}</label> <input type="number" min="1" max="30" class="form-control inputField" placeholder="ECTS" formControlName="courseEcts" />
+    <div class="row">
+      <div class="col-lg-6 col-sm-12">
+        <button class="btn btn-warning buttonClass" [routerLink]="['/admin']">Powrót</button>
+      </div>
+      <div class=" col-lg-6 col-sm-12">
+        <input id="submitBtn" type="submit" value="Aktualizuj" class="btn btn-success buttonClass" [disabled]="courseForm.status === 'INVALID'" />
+      </div>
+    </div>
+  </form>
+</div>

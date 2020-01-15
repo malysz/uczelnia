@@ -1,0 +1,35 @@
+<div class="details-wrapper">
+  <div class="row bg-secondary">
+    <div class="col-sm-6 col-md-5">
+      <img class="img-fluid icon" src="{{ course.icon }}">
+    </div>
+    <div class="col-sm-6 col-md-7">
+      <h1>{{ course.name }}</h1>
+    </div>
+  </div>
+  <div class="row bg-secondary">
+    <div class="col-sm-12 col-md-6">
+      <h3>Semestr: {{ course.semester }}</h3>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <h3>ECTS: {{ course.ects }}</h3>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <h3>Ilość miejsc: {{ course.maxStudents }}</h3>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <h3>Ocena: {{ course.grade }}</h3>
+    </div>
+  </div>
+  <div class="row bg-secondary">
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <button class="btn btn-warning" [routerLink]="['/courses']"> Powrót </button>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <button class="btn btn-success" (click)="enroll()" [disabled]="!canEnroll"> Zapisz się </button>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <app-course-grade [course]="course" [canRate]="canRate"></app-course-grade>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div>
+  <button [ngClass]="['btn btn-secondary', 'collapsible', collapse?'collapsible.active':'collapsible']" (click)="toggle()">Filtruj</button>
+  <div id="filter">
+    <form>
+      <label>Nazwa kursu:<input type="text" [(ngModel)]="termName" [ngModelOptions]="{standalone: true}"/></label>
+      <label>Ocena kursu:<input type="text" [(ngModel)]="termGrade" [ngModelOptions]="{standalone: true}"/></label>
+      <label>Semestr:<input type="text" [(ngModel)]="termSem" [ngModelOptions]="{standalone: true}"/></label>
+      <label>ECTS:<input type="text" [(ngModel)]="termEcts" [ngModelOptions]="{standalone: true}"/></label>
+    </form>
+  </div>
+  <ul class="list-group">
+  <app-course
+    *ngFor="let course of (courses | filter:termName:termGrade:termSem:termEcts | slice:page:page + 5), even as isEven"
+    [course]="course" [isEven]="isEven"
+  ></app-course>
+  </ul>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item">
+        <a class="page-link" *ngIf="this.page !== 0" (click)="previousPage()" tabindex="-1">Previous</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" *ngIf="this.page < (this.courses.length - 5)" (click)="nextPage()">Next</a>
+      </li>
+    </ul>
+  </nav>
+</div>

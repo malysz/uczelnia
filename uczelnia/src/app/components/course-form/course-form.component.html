@@ -1,0 +1,24 @@
+<div [ngClass]="courseForm">
+  <h1>Dodaj nowy kurs</h1>
+  <form [formGroup]="courseForm" (ngSubmit)="addCourse()">
+    <label>
+      Nazwa: <input type="text" formControlName="courseName">
+    </label>
+    <label>
+      Ikona: <input type="text" formControlName="courseIcon">
+    </label>
+    <label>
+      Ilość studentów: <input type="number" min="1" max="30" formControlName="maxStudents">
+    </label>
+    <label>
+      Semester: <input type="number" min="1" max="10" formControlName="courseSemester">
+    </label>
+    <label>
+      ECTS: <input type="number" min="1" max="30" formControlName="courseEcts">
+    </label>
+    <label>
+      Ocena kursu: <input type="number" min="1" max="5" formControlName="courseGrade">
+    </label>
+    <input id="submit" type="submit" value="Dodaj" [disabled]="courseForm.status === 'INVALID'">
+  </form>
+</div>

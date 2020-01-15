@@ -1,0 +1,16 @@
+.courseForm {
+  font-family: "Arial Narrow";
+}
+
+label {
+  display: block;
+  font-size: 3vh;
+  width: 50vw;
+  height: 4vh;
+}
+
+input {
+  border: none;
+  height: 3vh;
+  padding: 0.3vh;
+}

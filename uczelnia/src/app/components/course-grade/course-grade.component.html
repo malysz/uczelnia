@@ -1,0 +1,12 @@
+  <form [formGroup]="gradeForm" (ngSubmit)="addGrade()">
+    <label>
+      <select class="form-control" formControlName="newGrade">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </label>
+    <button type="submit" class="btn btn-primary" [disabled]="!canRate">OCEŃ</button>
+  </form>
