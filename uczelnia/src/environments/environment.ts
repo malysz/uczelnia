@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyCeSVn9giBFInuueGXMdW0kLbIS2BAKVlA",
-    authDomain: "uczelnia-8a2e6.firebaseapp.com",
-    databaseURL: "https://uczelnia-8a2e6.firebaseio.com",
-    projectId: "uczelnia-8a2e6",
-    storageBucket: "uczelnia-8a2e6.appspot.com",
-    messagingSenderId: "470340416972",
-    appId: "1:470340416972:web:24e83d17503c7193d41969"
+    apiKey: ********,
+    authDomain: ********,
+    databaseURL: ********,
+    projectId: ********,
+    storageBucket: ********,
+    messagingSenderId: ********,
+    appId: ********,
   }
 };
 
